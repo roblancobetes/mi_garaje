@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Garaje - Coches</title>
+  </head>
+  <body>
+    <h1>Listado de coches</h1>
+
+    {% if coches %}
+      <ul>
+        {% for c in coches %}
+          <li>
+            <a href="{% url 'garaje:detalle' c.pk %}">
+              {{ c.marca }} {{ c.modelo }}
+            </a>
+            — Dueño: {{ c.dueno }}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No hay coches aún. Añade algunos en el <a href="/admin/">admin</a>.</p>
+    {% endif %}
+  </body>
+</html>

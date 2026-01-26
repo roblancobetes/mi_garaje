@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Detalle coche</title>
+  </head>
+  <body>
+    <p><a href="{% url 'garaje:lista' %}">← Volver</a></p>
+
+    <h1>{{ coche.marca }} {{ coche.modelo }}</h1>
+    <p><strong>Dueño:</strong> {{ coche.dueno }}</p>
+    <p><small>Creado: {{ coche.created_at }}</small></p>
+  </body>
+</html>
