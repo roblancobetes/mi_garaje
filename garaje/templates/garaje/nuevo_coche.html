@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Garaje - Coches - nuevo coche</title>
+  </head>
+  <body>
+<div class="panel">
+    <label>Ingrese los nuevos coches</label>
+    <!-- Formulario con nuevas camas -->
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+<br>
+        <button type="submit">Guardar coche</button>
+    </form>
+</div>
+
+
+
+</body>
+</html>

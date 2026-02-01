@@ -21,5 +21,9 @@
     {% else %}
       <p>No hay coches aún. Añade algunos en el <a href="/admin/">admin</a>.</p>
     {% endif %}
+
+      <a href="{% url 'garaje:nuevo_coche' %}"> Añadir coches
+      </a>
+
   </body>
 </html>
